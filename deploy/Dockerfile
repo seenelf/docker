@@ -1,9 +1,12 @@
-FROM ubuntu:16.04
+FROM alpine:3.8
 
-RUN apt-get update && apt-get install -y \
-    openssh-client \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk update \
+  && apk upgrade \
+  && apk add --no-cache \
+             rsync \
+             openssh-client \
+             curl \
+  && rm -rf /var/cache/apk/*
 
 RUN mkdir -p ~/.ssh \
     && touch ~/.ssh/known_hosts \
