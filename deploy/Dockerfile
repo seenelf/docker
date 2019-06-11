@@ -6,6 +6,7 @@ RUN apk update \
              rsync \
              openssh-client \
              curl \
+             zip \
   && rm -rf /var/cache/apk/*
 
 RUN mkdir -p ~/.ssh \
