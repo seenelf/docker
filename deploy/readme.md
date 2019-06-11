@@ -1,5 +1,5 @@
 ## About the image
-This image is based on alpine:3.8 then install `openssl`, `curl` and `rsync`.
+This image is based on alpine:3.8 then install `openssl`, `curl`, `zip` and `rsync`.
 
 ## How to use
 - Add before_script into your gitlab-ci.yml (your deploy job)
